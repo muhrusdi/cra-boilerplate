@@ -8,7 +8,7 @@ const {
 } = require("customize-cra");
 const path = require("path");
 
-const aliases = {
+export const aliases = {
   "components": path.resolve(__dirname, "src/components"),
   "containers": path.resolve(__dirname, "src/containers"),
   "hooks": path.resolve(__dirname, "src/hooks"),
