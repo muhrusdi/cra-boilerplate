@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Button = ({children}) => {
+const Button = () => {
+  const [state, setState] = useState("login")
+  const handleClick = () => {
+    setState("clicked")
+  }
   return (
-    <button type="submit">login</button>
+    <button role="button" onClick={handleClick} type="submit">{state}</button>
   )
 }
 
