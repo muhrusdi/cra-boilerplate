@@ -9,13 +9,13 @@ const {
 const path = require("path");
 
 const aliases = {
-  "@components": path.resolve(__dirname, "src/components"),
-  "@containers": path.resolve(__dirname, "src/containers"),
-  "@hooks": path.resolve(__dirname, "src/hooks"),
-  "@hocs": path.resolve(__dirname, "src/hocs"),
-  "@images": path.resolve(__dirname, "src/images"),
-  "@utils": path.resolve(__dirname, "src/utils"),
-  "@layout": path.resolve(__dirname, "src/containers/layout"),
+  "components": path.resolve(__dirname, "src/components"),
+  "containers": path.resolve(__dirname, "src/containers"),
+  "hooks": path.resolve(__dirname, "src/hooks"),
+  "hocs": path.resolve(__dirname, "src/hocs"),
+  "images": path.resolve(__dirname, "src/images"),
+  "utils": path.resolve(__dirname, "src/utils"),
+  "layout": path.resolve(__dirname, "src/containers/layout"),
 };
 
 module.exports = override(
