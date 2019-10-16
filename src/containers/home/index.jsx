@@ -1,7 +1,15 @@
 import React from "react";
+import { useOvermind } from "overmind-state";
 
-const Home = () => (
-  <div>asdfd adsf</div>
-);
+const Home = () => {
+  const { state, actions } = useOvermind();
+
+  console.log(process.env.PORT_DEV);
+  return (
+    <div>
+      <div>asdf</div>
+    </div>
+  );
+};
 
 export default Home;
