@@ -4,11 +4,13 @@ import RouterApp from "routes";
 import { Provider } from "overmind-react";
 import { createOvermind } from "overmind";
 import { overmind } from "overmind-state";
+import { GlobalStyle } from "components";
 
 const overmindConfig = createOvermind(overmind);
 
 const App = () => (
   <Provider value={overmindConfig}>
+    <GlobalStyle />
     <RouterApp />
   </Provider>
 );
