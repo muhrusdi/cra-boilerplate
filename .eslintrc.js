@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  parser: 'babel-eslint',
   env: {
     browser: true,
     es6: true,
@@ -25,7 +26,7 @@ module.exports = {
   ],
   rules: {
     "linebreak-style": [0, "error", "windows"],
-    "import/prefer-default-export": false,
+    "quotes": ["error", "double"],
   },
   settings: {
     'import/resolver': {
@@ -37,7 +38,9 @@ module.exports = {
           ["hocs", path.resolve(__dirname, "src/hocs")],
           ["images", path.resolve(__dirname, "src/images")],
           ["utils", path.resolve(__dirname, "src/utils")],
-          ["layout", path.resolve(__dirname, "src/containers/layout")],
+          ["layouts", path.resolve(__dirname, "src/containers/layouts")],
+          ["routes", path.resolve(__dirname, "src/routes")],
+          ["overmind-state", path.resolve(__dirname, "src/overmind")],
         ],
         extensions: ['.ts', '.js', '.jsx', '.json'],
       },
