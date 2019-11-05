@@ -4,7 +4,7 @@ import RouterApp from "routes";
 import { Provider } from "overmind-react";
 import { createOvermind } from "overmind";
 import { overmind } from "overmind-state";
-import { GlobalStyle } from "components";
+import "components/global-style/styles.css";
 import { ThemeProvider } from "styled-components";
 import themes from "utils/themes";
 
@@ -13,7 +13,6 @@ const overmindConfig = createOvermind(overmind);
 const App = () => (
   <Provider value={overmindConfig}>
     <ThemeProvider theme={themes.light}>
-      <GlobalStyle />
       <RouterApp />
     </ThemeProvider>
   </Provider>

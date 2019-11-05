@@ -6,10 +6,13 @@ const {
   addBabelPlugins,
   addWebpackPlugin,
   useEslintRc,
+  fixBabelImports,
+  addLessLoader,
   addWebpackResolve,
 } = require("customize-cra");
 const path = require("path");
 const Dotenv = require('dotenv-webpack');
+const modifyVars = require("./src/utils/modify-vars");
 
 const aliases = {
   "components": path.resolve(__dirname, "src/components"),
@@ -35,6 +38,17 @@ module.exports = override(
     "react-hot-loader/babel",
     "babel-plugin-styled-components"
   ),
+  
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    style: true,
+  }),
+  
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: modifyVars,
+  }),
 
   addWebpackPlugin(new Dotenv()),
   /**
