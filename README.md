@@ -5,13 +5,13 @@
 ```
 -- hyperion/
 -- src/
-    -- components/
-    -- containers/
+    -- components/  // berisi component-compnent
+    -- containers/ // berisi halaman-halaman web
     -- hocs/
     -- hooks/
     -- images/
-    -- overmind/
-    -- routes/
+    -- overmind/ // state management
+    -- routes/  // route app
     -- utils/
         -- modify-vars
         -- themes
