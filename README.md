@@ -23,6 +23,11 @@
 ### Environment
 
 `.env`:
-- `PORT_DEV // port untuk develop`
-- `PORT_PROD // port untuk production`
-- `PORT_BETA // port untuk beta`
+```javascript
+HOST_PROD=https://example.com
+HOST_BETA=https://dev.example.com
+HOST_DEV=https://beta.example.com
+PORT_DEV=3000
+PORT_PROD=4000
+PORT_BETA=5000
+```
