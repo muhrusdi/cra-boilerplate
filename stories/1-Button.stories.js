@@ -1,6 +1,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { Button } from "@storybook/react/demo";
+import { Button } from "antd";
+
 
 export default {
   title: "Button",
@@ -15,3 +16,12 @@ export const emoji = () => (
     </span>
   </Button>
 );
+
+export const primary = () => (
+  <Button onClick={action("clicked")}>
+    <span role="img" aria-label="so cool">
+      😀 😎 👍 💯
+    </span>
+  </Button>
+);
+

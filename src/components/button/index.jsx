@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import styled from "styled-components";
 
-const Button = () => {
-  const [state, setState] = useState("login")
-  const handleClick = () => {
-    setState("clicked")
-  }
-  return (
-    <button role="button" onClick={handleClick} type="submit">{state}</button>
-  )
-}
+const Button = styled.button(
+  {
+    background: "blue",
+  },
+);
 
-export default Button
+export default Button;
