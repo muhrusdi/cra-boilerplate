@@ -1,4 +1,5 @@
 const path = require('path');
+const modifyVars = require("../src/utils/modify-vars");
 
 const aliases = {
   "components": path.resolve(__dirname, "../src/components"),
@@ -38,7 +39,10 @@ module.exports = async ({ config, mode }) => {
         require.resolve('css-loader'),
         {
           loader: require.resolve('less-loader'),
-          options: { javascriptEnabled : true }
+          options: {
+            modifyVars: modifyVars,
+            javascriptEnabled: true
+          }
         }
       ],
       include: [
