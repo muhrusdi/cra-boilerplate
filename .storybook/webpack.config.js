@@ -3,6 +3,14 @@ const modifyVars = require("../src/utils/modify-vars");
 
 const aliases = {
   "components": path.resolve(__dirname, "../src/components"),
+  "containers": path.resolve(__dirname, "../src/containers"),
+  "hooks": path.resolve(__dirname, "../src/hooks"),
+  "hocs": path.resolve(__dirname, "../src/hocs"),
+  "images": path.resolve(__dirname, "../src/images"),
+  "utils": path.resolve(__dirname, "../src/utils"),
+  "layouts": path.resolve(__dirname, "../src/containers/layouts"),
+  "routes": path.resolve(__dirname, "../src/routes"),
+  "overmind-state": path.resolve(__dirname, "../src/overmind"),
 };
 
 // Export a function. Accept the base config as the only param.
