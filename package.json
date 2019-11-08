@@ -19,6 +19,7 @@
     "react-hook-form": "^3.26.5",
     "react-hot-loader": "^4.12.15",
     "react-scripts": "3.2.0",
+    "storybook-addon-styled-component-theme": "^1.2.5",
     "styled-components": "^4.4.1"
   },
   "scripts": {
