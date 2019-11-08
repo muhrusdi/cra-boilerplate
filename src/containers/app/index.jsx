@@ -6,13 +6,13 @@ import { createOvermind } from "overmind";
 import { overmind } from "overmind-state";
 import "components/global-style/styles.css";
 import { ThemeProvider } from "styled-components";
-import themes from "utils/themes";
+import theme from "utils/theme";
 
 const overmindConfig = createOvermind(overmind);
 
 const App = () => (
   <Provider value={overmindConfig}>
-    <ThemeProvider theme={themes.light}>
+    <ThemeProvider theme={theme.light}>
       <RouterApp />
     </ThemeProvider>
   </Provider>

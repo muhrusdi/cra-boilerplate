@@ -1,5 +1,6 @@
 import cookie from "js-cookie";
 
+export { default as theme } from "./theme";
 /**
  * get token from
  */
