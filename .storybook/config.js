@@ -6,4 +6,4 @@ import { theme } from "../src/utils"
 configure(require.context('../stories', true, /\.stories\.js$/), module);
 
 const themes = [theme.light];
-addDecorator(withThemesProvider(themes));
+// addDecorator(withThemesProvider(themes));
