@@ -5,6 +5,7 @@ import { Provider } from "overmind-react";
 import { createOvermind } from "overmind";
 import { overmind } from "overmind-state";
 import "components/global-style/styles.css";
+import { Layout } from "containers/layouts";
 import { ThemeProvider } from "styled-components";
 import theme from "utils/theme";
 
@@ -13,7 +14,9 @@ const overmindConfig = createOvermind(overmind);
 const App = () => (
   <Provider value={overmindConfig}>
     <ThemeProvider theme={theme.light}>
-      <RouterApp />
+      <Layout>
+        <RouterApp />
+      </Layout>
     </ThemeProvider>
   </Provider>
 );
