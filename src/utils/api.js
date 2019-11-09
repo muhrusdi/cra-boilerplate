@@ -17,7 +17,7 @@ export const CRUD_USER = "/admin/master/user";
 // const AUTH = `Bearer ${getToken()}`;
 const AUTH = getToken();
 
-export const multiFetch = (path) => new Promise((resolve, reject) => Promise.all(path)
+export const multiFetch = ({ path }) => new Promise((resolve, reject) => Promise.all(path)
   .then((values) => Promise.all(values.map((value) => value.json())))
   .then((data) => {
     redirect(data.diagnostic.status, "/login", resolve(data));
@@ -26,7 +26,7 @@ export const multiFetch = (path) => new Promise((resolve, reject) => Promise.all
     reject(err);
   }));
 
-export const globalFetch = (method = "GET", path) => new Promise((resolve, reject) => {
+export const globalFetch = ({ method = "GET", path }) => new Promise((resolve, reject) => {
   fetch(`${HOST}${path}`, {
     method,
     headers: {
@@ -47,9 +47,11 @@ export const globalFetch = (method = "GET", path) => new Promise((resolve, rejec
     });
 });
 
-export const globalPost = (path, headers, body) => new Promise((resolve, reject) => {
+export const globalPost = ({
+  method = "POST", path, headers, body,
+}) => new Promise((resolve, reject) => {
   fetch(`${HOST}${path}`, {
-    method: "POST",
+    method,
     headers: {
       ...headers,
     },
