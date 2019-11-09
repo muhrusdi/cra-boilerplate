@@ -1,9 +1,9 @@
 import { getToken, redirect } from ".";
 
-const _HOST = "http://api-dev.realtravelfinance.com";
+const _HOST = "http://exampl.com";
 
 export const HOST = process.env.HOST_PROD || _HOST;
-const VERSION = "/v1";
+// const VERSION = "/v1";
 
 export const LOGIN = "/admin/auth/login";
 export const CRUD_COMPANY = "/admin/master/company";
@@ -14,7 +14,8 @@ export const READ_ALL_CITY = "/admin/master/country";
 export const CRUD_BRANCH_COMPANY = "/admin/master/companyBranch";
 export const CRUD_USER = "/admin/master/user";
 
-const AUTH = `Bearer ${getToken()}`;
+// const AUTH = `Bearer ${getToken()}`;
+const AUTH = getToken();
 
 export const multiFetch = (path) => new Promise((resolve, reject) => Promise.all(path)
   .then((values) => Promise.all(values.map((value) => value.json())))
