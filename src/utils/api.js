@@ -1,8 +1,8 @@
 import { getToken, redirect } from ".";
 
-const _HOST = "http://exampl.com";
+const HOST_SECOND = "http://exampl.com";
 
-export const HOST = process.env.HOST_PROD || _HOST;
+export const HOST = process.env.HOST_PROD || HOST_SECOND;
 // const VERSION = "/v1";
 
 export const LOGIN = "/admin/auth/login";
