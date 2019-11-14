@@ -4,6 +4,7 @@
   "private": true,
   "main": "hyperion/index.js",
   "homepage": ".",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "antd": "^3.25.0",
