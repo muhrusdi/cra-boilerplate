@@ -1,8 +1,8 @@
 {
   "name": "cra-boilerplate",
   "version": "0.1.0",
-  "private": true,
   "main": "hyperion/index.js",
+  "author": "muhrusdi",
   "homepage": ".",
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "dependencies": {
